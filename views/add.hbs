@@ -1,0 +1,28 @@
+<h1>Add a new course</h1>
+
+<form action="/add" method="POST">
+
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required>
+    <label for="title">Course Name</label>
+    <span class="helper-text" data-error="Enter title"></span>
+
+  </div>
+
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" required min="1">
+    <label for="price">Course price</label>
+    <span class="helper-text" data-error="Enter price"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="img" name="img" type="text" class="validate" required>
+    <label for="img">URL img</label>
+    <span class="helper-text" data-error="Enter image url"></span>
+
+  </div>
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+
+  <button type="submit" class="btn btn-primary">Add course</button>
+
+</form>
